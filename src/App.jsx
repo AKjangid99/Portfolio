@@ -1,3 +1,4 @@
+import { NavBar } from "./Component/NavBar";
 
 function App() {
 
@@ -5,13 +6,20 @@ function App() {
   return (
     <>
       <div>
+
         <header> 
-          logo :- linked in 
-          logo :- gitHub 
+        <NavBar/>
         </header>
+
         <h1> I am Ankur </h1>
         <br />
+
+
+
         <h1> Summery </h1>
+
+
+        
         <div>
           <p>
             Full Stack Developer skilled in building scalable web applications
