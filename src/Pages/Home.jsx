@@ -1,28 +1,25 @@
-import { NavBar } from "./Component/NavBar";
-import Home from "./Pages/Home";
+import React from 'react'
+import { NavBar } from '../Component/NavBar'
+import { Hero } from '../Component/Hero'
+import Card from '../Component/Card'
 
-function App() {
-
-
+const Home = () => {
   return (
     <>
-    <Home/>
-      {/* <div>
+      <div>
 
         <header> 
         <NavBar/>
         </header>
 
-        <h1> I am Ankur </h1>
-        <br />
 
+        {/* <h1> I am Ankur </h1> */}
+        
+        <Hero/>
 
 
         <h1> Summery </h1>
-
-
-        
-        <div>
+        {/* <div>
           <p>
             Full Stack Developer skilled in building scalable web applications
             across the front-end and back-end using technologies like React.js,
@@ -33,13 +30,12 @@ function App() {
             across cross-functional teams to deliver high-quality, full-stack
             solutions on time.
           </p>
-        </div>
+        </div> */}
 
         <div>
           <br />
 
           <h1>SKILL</h1>
-
           <h2>Front End :- Html, css, Javascript, React.js, Vite, Node.js, Tailwind CSS, </h2>
           <h2>Back End:-  Express.js, Golang, Nodejs, TypeScript, PostgreSQL, MongoDB </h2>
           <h2>C++, C#, Unity</h2>
@@ -47,42 +43,29 @@ function App() {
 
         <br />
 
+          <h1 className='bg-black'>card here </h1>
+        <Card 
+        liveLink="https://your-live-link.com"
+        githubLink="https://github.com/yourusername/weather-app"
+        image="https://via.placeholder.com/300x200"
+        title="Portfolio Website"
+        tech={['React', 'TailwindCSS', 'Vite']}
+        description="A responsive personal portfolio showcasing projects and skills using modern frontend technologies."
+        />
+
         <div>
+
+
           <h1>Projects</h1>
-          <div>
-            <img src=" " alt="img"></img>
-            <h1>Job Portal</h1>
-            <h2>technologies </h2>
-            <p>React, Tailwind, Express.js, MongoDB</p>
-          </div>
+       
 
-          <div>
-            <img src=" " alt="img"></img>
-            <h1>Shootiing Game</h1>
-            <h2>technologies </h2>
-            <p>C#, Unity 3D, Grahpics</p>
-          </div>
+         
 
-          <div>
-            <img src=" " alt="img"></img>
-            <h1>Flappy Bird</h1>
-            <h2>technologies </h2>
-            <p>C#, Unity,</p>
-          </div>
+         
 
-          <div>
-            <img src=" " alt="img"></img>
-            <h1>Wetaher App</h1>
-            <h2>technologies </h2>
-            <p>React, Tailwind</p>
-          </div>
+   
 
-          <div>
-            <img src=" " alt="img"></img>
-            <h1> UNO Game</h1>
-            <h2>technologies </h2>
-            <p>HTML, Css, Javascript</p>
-          </div>
+       
 
           <br />
 
@@ -122,9 +105,9 @@ function App() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default Home

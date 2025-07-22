@@ -12,7 +12,7 @@ export const NavBar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <div className="flex justify-between items-center px-6 py-4 bg-slate-950">
+      <div className="flex justify-between items-center px-6 py-4 bg-slate-950  border-b-2 border-purple-300 ">
         {/* Logo */}
         <div className="text-2xl font-bold text-white">CodeAJ</div>
 
@@ -27,9 +27,15 @@ export const NavBar = () => {
 
         {/* Desktop Social Icons */}
         <div className="hidden md:flex items-center space-x-4">
-          <DiGithubBadge size={28} color="white" />
-          <FaLinkedin size={26} color="white" />
-          <FaXTwitter size={24} color="white" />
+          <a href="https://github.com/AKjangid99">
+          <DiGithubBadge size={30} href="https://github.com/AKjangid99" className="text-white hover:text-purple-300" />
+          </a>
+          <a href="https://www.linkedin.com/in/ankur-jangid-741a69229/">
+          <FaLinkedin size={26}  className="text-white hover:text-purple-300" />
+          </a>
+          <a href="https://x.com/home">
+          <FaXTwitter size={24} className="text-white hover:text-purple-300"  />
+          </a>
         </div>
 
         {/* Mobile Hamburger Icon */}
