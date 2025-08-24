@@ -1,0 +1,134 @@
+/* Neon Glow Bits */
+.bit {
+    position: absolute;
+    font-size: 16px;
+    font-family: Consolas, monospace;
+    color: #00f7ff;
+    text-shadow:
+        0 0 5px #00f7ff,
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 40px #00e0ff;
+    opacity: 0.9;
+    animation: dropBits linear infinite;
+}
+
+/* Dropping Effect */
+@keyframes dropBits {
+    0% {
+        transform: translateY(-10vh);
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+/* Neon Pulse for Content */
+.background h1 {
+    text-shadow:
+        0 0 2px #00f7ff,
+        0 0 5px #00f7ff,
+        0 0 10px #00f7ff,
+        0 0 20px #00e0ff;
+}
+
+.neon-card {
+    border: 2px solid #00f7ff;
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 40px #00e0ff,
+        inset 0 0 10px #00f7ff;
+    transition: all 0.3s ease-in-out;
+    background: rgba(2, 6, 24, 0.6);
+}
+
+.neon-card:hover {
+    box-shadow:
+        0 0 20px #00f7ff,
+        0 0 40px #00f7ff,
+        0 0 80px #00e0ff,
+        inset 0 0 20px #00f7ff;
+    transform: scale(1.03);
+}
+
+.skill-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Different solid neon backgrounds */
+.badge-react {
+    background: #61dbfb;
+    color: #000;
+}
+
+/* React Cyan */
+.badge-node {
+    background: #3c873a;
+}
+
+/* Node.js Green */
+.badge-socket {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Socket.IO Yellow */
+.badge-mongo {
+    background: #4db33d;
+}
+
+/* MongoDB Green */
+.badge-postgres {
+    background: #336791;
+}
+
+/* PostgreSQL Blue */
+.badge-tailwind {
+    background: #38bdf8;
+    color: #000;
+}
+
+/* Tailwind Cyan */
+.badge-express {
+    background: #000;
+    border: 1px solid #fff;
+}
+
+/* Express Black */
+.badge-typescript {
+    background: #3178c6;
+}
+
+/* TypeScript Blue */
+.badge-cpp {
+    background: #00599c;
+}
+
+/* C++ Blue */
+.badge-golang {
+    background: #00ADD8;
+    color: #000;
+}
+
+/* Go Cyan */
