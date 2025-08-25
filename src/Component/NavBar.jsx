@@ -27,13 +27,13 @@ export const NavBar = () => {
 
         {/* Desktop Social Icons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="https://github.com/AKjangid99">
-          <DiGithubBadge size={30} href="https://github.com/AKjangid99" className="text-white hover:text-purple-300" />
+          <a href="https://github.com/AKjangid99" target="_blank">
+          <DiGithubBadge size={30} className="text-white hover:text-purple-300" />
           </a>
-          <a href="https://www.linkedin.com/in/ankur-jangid-741a69229/">
+          <a href="https://www.linkedin.com/in/ankur-jangid-741a69229/" target="_blank">
           <FaLinkedin size={26}  className="text-white hover:text-purple-300" />
           </a>
-          <a href="https://x.com/home">
+          <a href="https://x.com/home"target="_blank">
           <FaXTwitter size={24} className="text-white hover:text-purple-300"  />
           </a>
         </div>

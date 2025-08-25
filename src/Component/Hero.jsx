@@ -39,7 +39,7 @@ export const Hero = () => {
       <div className=" background relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <img src={logo} alt="Logo" style={{ width: '200px', height: '200px', top: 0, left: 0 }} /> {/* Use imported logo */}
         <h1 className="text-6xl font-bold">Hi I am Ankur</h1>
-        <p className="w-full md:w-1/2 pt-7 whitespace-nowrap">
+        <p className="w-full md:w-1/2 pt-7">
           Full Stack Developer crafting scalable, elegant applications with a focus on performance and seamless user experiences.
         </p>
       </div>

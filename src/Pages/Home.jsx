@@ -5,7 +5,7 @@ import Card from '../Component/Card'
 
 // Skill Badge Component
 const SkillBadge = ({ label, className }) => (
-  <span className={`px-3 py-1 m-1 rounded-full text-sm font-semibold text-white shadow-md ${className}`}>
+  <span className={`px-3 py-1 m-2 rounded-full text-sm font-semibold text-white shadow-md ${className}`}>
     {label}
   </span>
 )
@@ -44,7 +44,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-15 w-full max-w-6xl">
             {/* Frontend */}
-            <div className="neon-card p-20 rounded-2xl text-center">
+            <div className="neon-card p-10 rounded-2xl text-center">
               <h2 className="text-2xl font-bold text-cyan-400 mb-4">Frontend</h2>
               <div className="flex flex-wrap justify-center">
                 <SkillBadge label="HTML" className="bg-orange-500" />
@@ -70,7 +70,7 @@ const Home = () => {
             </div>
 
             {/* Other / Tools */}
-            <div className="neon-card p-20 rounded-2xl text-center">
+            <div className="neon-card p-10 rounded-2xl text-center">
               <h2 className="text-2xl font-bold text-cyan-400 mb-4">Other</h2>
               <div className="flex flex-wrap justify-center">
                 <SkillBadge label="C++" className="bg-blue-800" />

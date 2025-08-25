@@ -40,22 +40,22 @@
 }
 
 .neon-card {
-    border: 2px solid #00f7ff;
+    border: 2px solid #dab2ff;
     box-shadow:
-        0 0 10px #00f7ff,
-        0 0 20px #00f7ff,
-        0 0 40px #00e0ff,
-        inset 0 0 10px #00f7ff;
+        0 0 10px #dab2ff,
+        0 0 20px #dab2ff,
+        0 0 40px #dab2ff,
+        inset 0 0 10px #dab2ff;
     transition: all 0.3s ease-in-out;
     background: rgba(2, 6, 24, 0.6);
 }
 
 .neon-card:hover {
     box-shadow:
-        0 0 20px #00f7ff,
-        0 0 40px #00f7ff,
-        0 0 80px #00e0ff,
-        inset 0 0 20px #00f7ff;
+        0 0 20px #dab2ff,
+        0 0 40px #dab2ff,
+        0 0 80px #dab2ff,
+        inset 0 0 20px #dab2ff;
     transform: scale(1.03);
 }
 
