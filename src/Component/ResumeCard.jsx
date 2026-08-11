@@ -7,6 +7,7 @@ import { Card, CardHeader } from "./ui/Card";
 import { cn } from "../lib/utils";
 
 export function ResumeCard({
+  logo: Logo,
   logoUrl,
   altText,
   title,
@@ -35,8 +36,20 @@ export function ResumeCard({
       <Card className="flex flex-row items-center border-none bg-transparent p-0 shadow-none">
         <div className="flex-none">
           <Avatar className="border-border m-auto size-12 border bg-white">
-            <AvatarImage src={logoUrl} alt={altText} className="object-contain p-1" />
-            <AvatarFallback className="bg-muted">{altText?.[0]}</AvatarFallback>
+            {Logo ? (
+              <Logo className="size-full p-2" />
+            ) : (
+              <>
+                <AvatarImage
+                  src={logoUrl}
+                  alt={altText}
+                  className="object-contain p-1"
+                />
+                <AvatarFallback className="bg-muted">
+                  {altText?.[0]}
+                </AvatarFallback>
+              </>
+            )}
           </Avatar>
         </div>
         <div className="group ml-4 flex flex-grow flex-col items-center">

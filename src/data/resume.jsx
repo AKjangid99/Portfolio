@@ -19,6 +19,8 @@ import {
   SiX,
 } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
+import { Trilasoft } from "../Component/ui/svgs/Trilasoft";
+import { Infotact } from "../Component/ui/svgs/Infotact";
 
 export const DATA = {
   name: "Ankur Jangid",
@@ -70,13 +72,13 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/",
+        url: "www.linkedin.com/in/ankurjangid",
         icon: SiLinkedin,
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com/",
+        url: "https://x.com/AnkurJangid02",
         icon: SiX,
         navbar: true,
       },
@@ -95,9 +97,9 @@ export const DATA = {
       href: "#",
       badges: [],
       location: "Remote",
-      title: "Software Engineer Intern",
-      logoUrl: "",
-      start: "2024",
+      title: " Junior Software Engineer",
+      logo: Trilasoft,
+      start: "Jan 2024",
       end: "Present",
       description:
         "Enhanced the RedSky Mobility platform with new UI components and implemented Ionic for cross-platform mobile compatibility. Updated and optimized UI components for Shift Krado, improving user engagement and ensuring consistency across web and mobile interfaces using React and modern frontend frameworks.",
@@ -108,7 +110,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Full Stack Intern",
-      logoUrl: "",
+      logo: Infotact,
       start: "2024",
       end: "2024",
       description:
@@ -123,7 +125,7 @@ export const DATA = {
       degree: "Computer Science",
       logoUrl: "",
       start: "2021",
-      end: "2025",
+      end: "2024",
     },
   ],
 
