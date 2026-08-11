@@ -1,188 +1,167 @@
-import React from 'react'
-import { NavBar } from '../Component/NavBar'
-import { Hero } from '../Component/Hero'
-import Card from '../Component/Card'
+import Markdown from "react-markdown";
+import { ArrowUpRight } from "lucide-react";
+import { BlurFade } from "../Component/ui/BlurFade";
+import { BlurFadeText } from "../Component/ui/BlurFadeText";
+import { Avatar, AvatarFallback, AvatarImage } from "../Component/ui/Avatar";
+import { WorkSection } from "../Component/sections/WorkSection";
+import { ProjectsSection } from "../Component/sections/ProjectsSection";
+import { HackathonsSection } from "../Component/sections/HackathonsSection";
+import { ContactSection } from "../Component/sections/ContactSection";
+import { DATA } from "../data/resume";
 
-// Skill Badge Component
-const SkillBadge = ({ label, className }) => (
-  <span className={`px-3 py-1 m-2 rounded-full text-sm font-semibold text-white shadow-md ${className}`}>
-    {label}
-  </span>
-)
+const BLUR_FADE_DELAY = 0.04;
 
 const Home = () => {
   return (
-    <>
-      <div>
-        <header style={{ position: 'sticky', top: 0, zIndex: 100 }}>
-          <NavBar />
-        </header>
-
-        <Hero />
-
-        {/* Summary Section */}
-        <div className="flex items-center justify-center bg-[#020618] px-6">
-          <div className="relative max-w-3xl p-20 m-50 rounded-2xl neon-card text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">Summary</h1>
-            <p className="text-gray-300 leading-relaxed">
-              Full Stack Developer with expertise in building scalable, high-performance web applications
-              across both front-end and back-end. Skilled in modern technologies such as{" "}
-              <SkillBadge label="React.js" className="bg-cyan-400 text-black" />
-              <SkillBadge label="Node.js" className="bg-green-500" />
-              <SkillBadge label="MongoDB" className="bg-green-600" />
-              <SkillBadge label="PostgreSQL" className="bg-blue-600" />, with strong proficiency in designing RESTful APIs
-              and managing complex databases. Passionate about writing clean, maintainable code, optimizing
-              performance, and delivering seamless user experiences. Known for strong problem-solving abilities
-              and effective collaboration across cross-functional teams to deliver reliable, full-stack solutions on time.
-            </p>
+    <main className="relative mx-auto flex min-h-dvh max-w-2xl flex-col gap-14 px-6 pt-12 pb-28 sm:pt-24">
+      <section id="hero">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
+          <div className="flex flex-col justify-between gap-2 gap-y-6 md:flex-row">
+            <div className="order-2 flex flex-col gap-2 md:order-1">
+              <BlurFadeText
+                delay={BLUR_FADE_DELAY}
+                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+                yOffset={8}
+                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+              />
+              <BlurFadeText
+                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
+                delay={BLUR_FADE_DELAY}
+                text={DATA.description}
+              />
+            </div>
+            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
+              <Avatar className="ring-muted size-24 rounded-full border shadow-lg ring-4 md:size-32">
+                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                <AvatarFallback>{DATA.initials}</AvatarFallback>
+              </Avatar>
+            </BlurFade>
           </div>
         </div>
+      </section>
 
-        {/* Skills Section */}
-        <div className="bg-[#020618] flex flex-col items-center justify-center pt-0 pb-50 space-y-10">
-          <h1 className="text-5xl font-bold text-white mb-10">Skills</h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-15 w-full max-w-6xl">
-            {/* Frontend */}
-            <div className="neon-card p-10 rounded-2xl text-center">
-              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Frontend</h2>
-              <div className="flex flex-wrap justify-center">
-                <SkillBadge label="HTML" className="bg-orange-500" />
-                <SkillBadge label="CSS" className="bg-blue-500" />
-                <SkillBadge label="JavaScript" className="bg-yellow-400 text-black" />
-                <SkillBadge label="React.js" className="bg-cyan-400 text-black" />
-                <SkillBadge label="Vite" className="bg-purple-500" />
-                <SkillBadge label="Tailwind CSS" className="bg-sky-400 text-black" />
-              </div>
+      <section id="about">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 3}>
+            <h2 className="text-xl font-bold">About</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 4}>
+            <div className="prose text-muted-foreground max-w-full text-pretty font-sans leading-relaxed">
+              <Markdown>{DATA.summary}</Markdown>
             </div>
+          </BlurFade>
+        </div>
+      </section>
 
-            {/* Backend */}
-            <div className="neon-card p-20 rounded-2xl text-center">
-              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Backend</h2>
-              <div className="flex flex-wrap justify-center">
-                <SkillBadge label="Express.js" className="bg-gray-900 border border-white" />
-                <SkillBadge label="Golang" className="bg-cyan-500 text-black" />
-                <SkillBadge label="Node.js" className="bg-green-500" />
-                <SkillBadge label="TypeScript" className="bg-blue-600" />
-                <SkillBadge label="PostgreSQL" className="bg-indigo-600" />
-                <SkillBadge label="MongoDB" className="bg-green-700" />
-              </div>
-            </div>
+      <section id="work">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Work Experience</h2>
+          </BlurFade>
+          <WorkSection />
+        </div>
+      </section>
 
-            {/* Other / Tools */}
-            <div className="neon-card p-10 rounded-2xl text-center">
-              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Other</h2>
-              <div className="flex flex-wrap justify-center">
-                <SkillBadge label="C++" className="bg-blue-800" />
-                <SkillBadge label="C#" className="bg-purple-600" />
-                <SkillBadge label="Unity" className="bg-black border border-white" />
-              </div>
-            </div>
+      <section id="education">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Education</h2>
+          </BlurFade>
+          <div className="flex flex-col gap-8">
+            {DATA.education.map((education, index) => (
+              <BlurFade
+                key={education.school}
+                delay={BLUR_FADE_DELAY * 8 + index * 0.05}
+              >
+                <a
+                  href={education.href || "#"}
+                  target={
+                    education.href && education.href !== "#"
+                      ? "_blank"
+                      : undefined
+                  }
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-x-3"
+                >
+                  <div className="flex min-w-0 flex-1 items-center gap-x-3">
+                    {education.logoUrl ? (
+                      <img
+                        src={education.logoUrl}
+                        alt={education.school}
+                        className="ring-border size-8 flex-none overflow-hidden rounded-full border object-contain p-1 shadow ring-2 md:size-10"
+                      />
+                    ) : (
+                      <div className="ring-border bg-muted size-8 flex-none rounded-full border p-1 shadow ring-2 md:size-10" />
+                    )}
+                    <div className="flex min-w-0 flex-1 flex-col gap-0.5">
+                      <div className="flex items-center gap-2 font-semibold leading-none">
+                        {education.school}
+                        <ArrowUpRight
+                          className="text-muted-foreground h-3.5 w-3.5 -translate-x-2 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
+                          aria-hidden
+                        />
+                      </div>
+                      <div className="text-muted-foreground font-sans text-sm">
+                        {education.degree}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-muted-foreground flex flex-none items-center gap-1 text-right text-xs tabular-nums">
+                    <span>
+                      {education.start} - {education.end}
+                    </span>
+                  </div>
+                </a>
+              </BlurFade>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Projects Section */}
-        <div className="bg-[#020618] flex flex-col items-center justify-center px-6 pt-0 pb-50 space-y-10">
-          <h1 className="text-5xl font-bold text-white mb-10">Projects</h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-
-            {/* Example Project */}
-            <div className="neon-card p-6 rounded-2xl text-center">
-              <img src="https://via.placeholder.com/300x200" alt="Portfolio Website" className="rounded-md mb-4 w-full" />
-              <h2 className="text-2xl font-bold text-cyan-400 mb-2">Portfolio Website</h2>
-              <p className="text-gray-300 mb-4">
-                A responsive personal portfolio showcasing projects and skills using modern frontend technologies.
-              </p>
-              <div className="flex flex-wrap justify-center mb-4">
-                <SkillBadge label="React" className="bg-cyan-400 text-black" />
-                <SkillBadge label="TailwindCSS" className="bg-sky-400 text-black" />
-                <SkillBadge label="Vite" className="bg-purple-500" />
-              </div>
-              <div className="flex justify-center space-x-4">
-                <a href="https://your-live-link.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Live</a>
-                <a href="https://github.com/yourusername/weather-app" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">GitHub</a>
-              </div>
-            </div>
-
-            {/* Repeat same for other projects... */}
-          </div>
-        </div>
-
-        {/* Experience Section */}
-        <div className="bg-[#020618] flex flex-col items-center justify-center px-6 pb-16 space-y-10">
-          <h1 className="section-title section-green text-5xl font-bold text-white mb-20">
-            Experience
-          </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-15 w-full max-w-6xl">
-            {/* Trilasoft */}
-            <div className="neon-card p-6 rounded-2xl">
-              <h2 className="text-2xl font-bold text-cyan-400 mb-4">
-                Trilasoft | Software Engineer Intern
-              </h2>
-
-              {/* Project 1 */}
-              <div className="p-4 mb-4 rounded-xl border-2 border-red-500 bg-black/30 shadow-[0_0_10px_#ef4444]">
-                <h3 className="text-xl text-white font-semibold mb-1">
-                  RedSky Mobility
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge label="Angular" className="bg-red-500" />
-                  <SkillBadge label="Ionic" className="bg-indigo-500" />
-                  <SkillBadge label="TypeScript" className="bg-blue-600" />
+      <section id="skills">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Skills</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-2">
+            {DATA.skills.map((skill, id) => (
+              <BlurFade
+                key={skill.name}
+                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+              >
+                <div className="bg-background border-border ring-border/20 flex h-8 w-fit items-center gap-2 rounded-xl border px-4 ring-2">
+                  {skill.icon && (
+                    <skill.icon
+                      className="size-4 overflow-hidden rounded object-contain text-[var(--skill-color)] dark:text-[var(--skill-color-dark)]"
+                      style={{
+                        "--skill-color": skill.color,
+                        "--skill-color-dark": skill.darkColor ?? skill.color,
+                      }}
+                    />
+                  )}
+                  <span className="text-foreground text-sm font-medium">
+                    {skill.name}
+                  </span>
                 </div>
-                <p className="text-gray-300 text-sm mt-2">
-                  Enhanced the RedSky Mobility platform with new UI components.
-                  Implemented Ionic for cross-platform mobile compatibility.
-                </p>
-              </div>
-
-              {/* Project 2 */}
-              <div className="p-4 rounded-xl border-2 border-cyan-400 bg-black/30 shadow-[0_0_10px_#22d3ee]">
-                <h3 className="text-xl text-white font-semibold mb-1">Shift Krado</h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge label="React" className="bg-cyan-400 text-black" />
-                  <SkillBadge label="TypeScript" className="bg-blue-600" />
-                </div>
-                <p className="text-gray-300 text-sm mt-2">
-                  Updated and optimized UI components, improving user engagement and
-                  ensuring consistency across platforms.
-                </p>
-              </div>
-            </div>
-
-            {/* Infotact */}
-            <div className="neon-card p-6 rounded-2xl">
-              <h2 className="text-2xl font-bold text-cyan-400 mb-4">
-                Infotact Solution | Full Stack Intern
-              </h2>
-
-              {/* Project 1 */}
-              <div className="p-4 rounded-xl border-2 border-green-500 bg-black/30 shadow-[0_0_10px_#22c55e]">
-                <h3 className="text-xl text-white font-semibold mb-1">Job Portal</h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge label="React.js" className="bg-cyan-400 text-black" />
-                  <SkillBadge label="Redux" className="bg-purple-600" />
-                  <SkillBadge label="Node.js" className="bg-green-500" />
-                  <SkillBadge
-                    label="Express"
-                    className="bg-gray-900 border border-white"
-                  />
-                  <SkillBadge label="MongoDB" className="bg-green-700" />
-                </div>
-                <p className="text-gray-300 text-sm mt-2">
-                  Developed and maintained full-stack applications using MERN stack.
-                  Built interactive UI components with React.js & Redux.
-                </p>
-              </div>
-            </div>
+              </BlurFade>
+            ))}
           </div>
         </div>
+      </section>
 
-      </div>
-    </>
-  )
-}
+      <section id="projects">
+        <ProjectsSection />
+      </section>
 
-export default Home
+      <section id="hackathons">
+        <HackathonsSection />
+      </section>
+
+      <section id="contact">
+        <ContactSection />
+      </section>
+    </main>
+  );
+};
+
+export default Home;
