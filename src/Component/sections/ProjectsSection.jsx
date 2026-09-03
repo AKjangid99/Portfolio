@@ -37,6 +37,7 @@ export function ProjectsSection() {
               dates={project.dates}
               tags={project.technologies}
               image={project.image}
+              images={project.images}
               video={project.video}
               links={project.links}
             />
