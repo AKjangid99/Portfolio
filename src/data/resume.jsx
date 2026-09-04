@@ -42,10 +42,10 @@ import flappybird2 from "../assets/flappybird2.png";
 
 
 
-import indri from "../assets/indri.png";
-import indri1 from "../assets/indri1.png";
-import indri2 from "../assets/indri2.png";
-import indri3 from "../assets/indri3.png";
+import indri from "../assets/Indri.png";
+import indri1 from "../assets/Indri1.png";
+import indri2 from "../assets/Indri2.png";
+import indri3 from "../assets/Indri3.png";
 
 import jp1 from "../assets/jp1.png";
 import jp2 from "../assets/jp2.png";
