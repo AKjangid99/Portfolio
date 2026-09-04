@@ -39,6 +39,14 @@ import carRental5 from "../assets/car_rental5.png";
 import flappybird1 from "../assets/flappybird1.png";
 import flappybird2 from "../assets/flappybird2.png";
 
+
+
+
+import indri from "../assets/indri.png";
+import indri1 from "../assets/indri1.png";
+import indri2 from "../assets/indri2.png";
+import indri3 from "../assets/indri3.png";
+
 import jp1 from "../assets/jp1.png";
 import jp2 from "../assets/jp2.png";
 import jp3 from "../assets/jp3.png";
@@ -49,6 +57,8 @@ import E2 from "../assets/E2.png";
 
 import UL from "../assets/UL.png";
 import UL1 from "../assets/UL1.png";
+import UL2 from "../assets/UL2.png";
+import UL3 from "../assets/UL3.png";
 
 export const DATA = {
   name: "Ankur Jangid",
@@ -157,7 +167,31 @@ export const DATA = {
 
   projects: [
     {
-      title: "Trading App",
+      title: "Indri ",
+      href: "#",
+      dates: "2026",
+      active: true,
+      description:
+        "Redesign the Indri website, making it more interactive using 3D elements and adding a little spice of animation while maintaining the Indian vibe.",
+      technologies: ["three.js ", "Next.js ", "Node.js"],
+      links: [{ type: "Source", href: "https://github.com/AKjangid99/indri", icon: SiGithub }, { type: "Live", href: "https://indri-malt-whisky.vercel.app/" }],
+      images: [indri, indri1, indri2, indri3],
+      video: "",
+    },
+    {
+      title: "UI library",
+      href: "#",
+      dates: "2026",
+      active: true,
+      description:
+        "Built a reusable React Native UI component library with customizable, production-ready components, consistent theming, and a focus on accessibility and developer experience.",
+      technologies: ["React Native", "Expo"],
+      links: [{ type: "Source", href: "https://github.com/AKjangid99/Component-Library-for-Mobile", icon: SiGithub }, { type: "Live", href: "https://component-library-for-mobile.vercel.app" }],
+      images: [UL, UL1, UL2, UL3],
+      // video: "",
+    },
+    {
+      title: "Trading Mobile App",
       href: "#",
       dates: "2026",
       active: true,
@@ -169,39 +203,66 @@ export const DATA = {
       // video: "",
     },
     {
-      title: "UI library",
+      title: "Mecanica",
       href: "#",
       dates: "2026",
       active: true,
       description:
-        "Built a reusable React Native UI component library with customizable, production-ready components, consistent theming, and a focus on accessibility and developer experience.",
-      technologies: ["React Native", "Expo"],
-      links: [{ type: "Source", href: "https://github.com/AKjangid99/Component-Library-for-Mobile", icon: SiGithub }],
-      images: [UL, UL1],
-      // video: "",
+        "Built an interactive 3D engine visualization to practice Three.js, featuring smooth animations and immersive 3D interactions.",
+      technologies: ["Three.js"],
+      links: [{ type: "Source", href: "https://github.com/AKjangid99/engine_dignose", icon: SiGithub }, { type: "Live", href: "https://engine-dignose.vercel.app/" }],
+      image: [E1, E2],
+      video: "",
     },
+
     {
-      title: "Car Rental App",
+      title: "Car Rental ",
       href: "#",
       dates: "2026",
       active: true,
       description:
         "A car rental platform where users browse available cars, book rentals, and manage their trips, with authentication and a responsive interface.",
       technologies: ["React Native", "Expo", "Node.js", "MongoDB"],
-      links: [{ type: "Source", href: "https://github.com/AKjangid99/car-rental-frontend", icon: SiGithub }],
+      links: [{ type: "Source", href: "https://github.com/AKjangid99/car-rental-frontend", icon: SiGithub }, { type: "Live", href: "https://car-rental-frontend-nine-liart.vercel.app" }],
       images: [carRental1, carRental2, carRental3, carRental4, carRental5],
       video: "",
     },
     {
       title: "Job Portal",
       href: "#",
-      dates: "2024  ",
+      dates: "2024",
       active: true,
       description:
         "A full-stack job portal where recruiters post openings and candidates apply, with authentication, search and application tracking.",
       technologies: ["React", "Tailwind CSS", "Express.js", "MongoDB"],
-      links: [{ type: "Source", href: "https://github.com/AKjangid99/Job_protel", icon: SiGithub }],
+      links: [{ type: "Source", href: "https://github.com/AKjangid99/Job_protel", icon: SiGithub }, { type: "Live", href: "https://job-protel.vercel.app" }],
       image: [jp1, jp2, jp3, jp4],
+      // video: "",
+    },
+
+    {
+      title: "Flappy Bird",
+      href: "#",
+      dates: "2023",
+      active: true,
+      description:
+        "A clone of the classic Flappy Bird with physics-based movement, procedural obstacles and score tracking.",
+      technologies: ["C#", "Unity"],
+      links: [{ type: "Source", href: "https://github.com/AKjangid99/Flappy_Bird", icon: SiGithub }],
+      image: [flappybird1, flappybird2],
+      video: "",
+    },
+
+    {
+      title: "UNO Game",
+      href: "#",
+      dates: "2022",
+      active: true,
+      description:
+        "A browser-based UNO card game implementing full turn logic, card effects and win conditions in vanilla JavaScript.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      links: [{ type: "Source", href: "https://github.com/AKjangid99/Uno-card-game", icon: SiGithub }, { type: "Live", href: "https://eloquent-zuccutto-47fbc9.netlify.app/" }],
+      image: unoImage,
       video: "",
     },
     // {
@@ -228,42 +289,6 @@ export const DATA = {
     //   image: "",
     //   video: "",
     // },
-    {
-      title: "Flappy Bird",
-      href: "#",
-      dates: "2023",
-      active: true,
-      description:
-        "A clone of the classic Flappy Bird with physics-based movement, procedural obstacles and score tracking.",
-      technologies: ["C#", "Unity"],
-      links: [{ type: "Source", href: "https://github.com/AKjangid99/Flappy_Bird", icon: SiGithub }],
-      image: [flappybird1, flappybird2],
-      video: "",
-    },
-    {
-      title: "UNO Game",
-      href: "#",
-      dates: "2022",
-      active: true,
-      description:
-        "A browser-based UNO card game implementing full turn logic, card effects and win conditions in vanilla JavaScript.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      links: [{ type: "Source", href: "https://github.com/AKjangid99/Uno-card-game", icon: SiGithub }],
-      image: unoImage,
-      video: "",
-    },
-    {
-      title: "3js",
-      href: "#",
-      dates: "2026",
-      active: true,
-      description:
-        "Built an interactive 3D engine visualization to practice Three.js, featuring smooth animations and immersive 3D interactions.",
-      technologies: ["Three.js"],
-      links: [{ type: "Source", href: "https://github.com/AKjangid99/Uno-card-game", icon: SiGithub }],
-      image: [E1, E2],
-      video: "",
-    },
   ],
 
   hackathons: [],
