@@ -25,40 +25,40 @@ import { Infotact } from "../Component/ui/svgs/Infotact";
 
 
 import me from "../assets/me.jpg";
-import unoImage from "../assets/uno.png";
-import perps1 from "../assets/perps1.png";
-import perps2 from "../assets/perps2.png";
-import perps3 from "../assets/perps3.png";
-import perps4 from "../assets/perps4.png";
-import perps5 from "../assets/perps5.png";
-import carRental1 from "../assets/car_rental1.png";
-import carRental2 from "../assets/car_rental2.png";
-import carRental3 from "../assets/car_rental3.png";
-import carRental4 from "../assets/car_rental4.png";
-import carRental5 from "../assets/car_rental5.png";
-import flappybird1 from "../assets/flappybird1.png";
-import flappybird2 from "../assets/flappybird2.png";
+import unoImage from "../assets/uno.jpg";
+import perps1 from "../assets/perps1.jpg";
+import perps2 from "../assets/perps2.jpg";
+import perps3 from "../assets/perps3.jpg";
+import perps4 from "../assets/perps4.jpg";
+import perps5 from "../assets/perps5.jpg";
+import carRental1 from "../assets/car_rental1.jpg";
+import carRental2 from "../assets/car_rental2.jpg";
+import carRental3 from "../assets/car_rental3.jpg";
+import carRental4 from "../assets/car_rental4.jpg";
+import carRental5 from "../assets/car_rental5.jpg";
+import flappybird1 from "../assets/flappybird1.jpg";
+import flappybird2 from "../assets/flappybird2.jpg";
 
 
 
 
-import indri from "../assets/Indri.png";
-import indri1 from "../assets/Indri1.png";
-import indri2 from "../assets/Indri2.png";
-import indri3 from "../assets/Indri3.png";
+import indri from "../assets/Indri.jpg";
+import indri1 from "../assets/Indri1.jpg";
+import indri2 from "../assets/Indri2.jpg";
+import indri3 from "../assets/Indri3.jpg";
 
-import jp1 from "../assets/jp1.png";
-import jp2 from "../assets/jp2.png";
-import jp3 from "../assets/jp3.png";
-import jp4 from "../assets/jp4.png";
+import jp1 from "../assets/jp1.jpg";
+import jp2 from "../assets/jp2.jpg";
+import jp3 from "../assets/jp3.jpg";
+import jp4 from "../assets/jp4.jpg";
 
-import E1 from "../assets/E1.png";
-import E2 from "../assets/E2.png";
+import E1 from "../assets/E1.jpg";
+import E2 from "../assets/E2.jpg";
 
 import UL from "../assets/UL.png";
 import UL1 from "../assets/UL1.png";
 import UL2 from "../assets/UL2.png";
-import UL3 from "../assets/UL3.png";
+
 
 export const DATA = {
   name: "Ankur Jangid",
@@ -167,7 +167,7 @@ export const DATA = {
 
   projects: [
     {
-      title: "Indri ",
+      title: "Indri",
       href: "#",
       dates: "2026",
       active: true,
@@ -187,7 +187,7 @@ export const DATA = {
         "Built a reusable React Native UI component library with customizable, production-ready components, consistent theming, and a focus on accessibility and developer experience.",
       technologies: ["React Native", "Expo"],
       links: [{ type: "Source", href: "https://github.com/AKjangid99/Component-Library-for-Mobile", icon: SiGithub }, { type: "Live", href: "https://component-library-for-mobile.vercel.app" }],
-      images: [UL, UL1, UL2, UL3],
+      images: [UL, UL1, UL2],
       // video: "",
     },
     {
